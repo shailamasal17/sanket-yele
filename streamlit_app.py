@@ -287,6 +287,10 @@ user_input = st.text_area(
 # BUTTON
 # =====================================
 
+# =====================================
+# BUTTON
+# =====================================
+
 if st.button("⚡ Generate AI Summary"):
 
     if user_input.strip() == "":
@@ -300,35 +304,14 @@ if st.button("⚡ Generate AI Summary"):
             summary = summarize_dialogue(user_input)
 
         st.markdown(
-            f"""
+            """
             <div class="summary-box">
-
                 <div class="summary-title">
                     🧠 AI Generated Summary
                 </div>
-
-                <div>
-                    {summary}
-                </div>
-
             </div>
             """,
             unsafe_allow_html=True
         )
 
-# =====================================
-# FOOTER
-# =====================================
-
-st.markdown(
-    """
-    <div class="summary-box">
-        <div class="summary-title">
-            🧠 AI Generated Summary
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-st.success(summary)
+        st.success(summary)
