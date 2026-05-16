@@ -322,11 +322,13 @@ if st.button("⚡ Generate AI Summary"):
 
 st.markdown(
     """
-    <div class="footer">
-        Developed with ❤️ using Streamlit + Transformers
+    <div class="summary-box">
+        <div class="summary-title">
+            🧠 AI Generated Summary
+        </div>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-st.markdown('</div>', unsafe_allow_html=True)
+st.success(summary)
